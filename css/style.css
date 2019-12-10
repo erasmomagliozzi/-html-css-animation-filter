@@ -30,24 +30,37 @@
     background: red;
     transition: width 3s,height 3s;
 }
-.ex-6-img, .ex-8-img {
-    width: 500px;
+.ex-6-img, {
+  width: 500px;
 }
 .ex-7-img {
   width: 500px;
   animation-name: color_image;
   animation-duration: 10s;
 }
+ .ex-8-img {
+  width: 500px;
+  animation-name: effect_image;
+  animation-duration: 8s;
+ }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    animation-name: effect_image_2;
+    animation-duration: 8s;
 }
 .ex-10-icon {
     font-size: 60px;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 .ex-11-icon {
     font-size: 60px;
+    transition: transform 300ms ease-in-out;
+}
 }
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -108,4 +121,23 @@
   0% {filter:blur(20px);}
   50% {filter: sepia(1);}
   100% {filter:saturate(8);}
+}
+@keyframes effect_image {
+  0% {filter:blur(20px);}
+  50% {filter: sepia(1);}
+  100% {border-radius: 50px;}
+}
+@keyframes effect_image_2 {
+  0% {filter:blur(20px);}
+  50% {filter: sepia(1);}
+  75% {border-radius: 50px;}
+  100% {width: 200px;}
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+.ex-11-icon:hover{
+transform: rotate(270deg);
+
 }
